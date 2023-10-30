@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './pages/root/Root';
 import Home from './pages/home/Home';
+import EditPDF from './pages/editPDF/EditPDF';
 
 export default function Router() {
 
@@ -15,7 +16,7 @@ export default function Router() {
                 },
                 {
                     path: "edit",
-                    element: <h1>Hello</h1> 
+                    element: <EditPDF />
                 }
             ]
         },

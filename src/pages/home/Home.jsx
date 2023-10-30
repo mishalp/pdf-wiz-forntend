@@ -1,10 +1,13 @@
 import { useState } from "react"
 import Loader from "../../components/loader/Loader"
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
 
 export default function Home() {
 
   const [loading, setLoading] = useState(false)
+
+  const navigate = useNavigate()
 
   const fileChangeHandler = async (e) => {
     if (e.target.files[0]?.type === "application/pdf") {
@@ -19,9 +22,10 @@ export default function Home() {
           }
         )
         console.log(res.data);
-        setLoading(false)
+        navigate('edit', {state: `http://localhost:3000/files/${res.data.file}`}) 
       } catch (error) {
         console.log(error);
+        setLoading(false)
       }
     } else {
       alert("Only PDF file is accepted")
