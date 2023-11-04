@@ -2,6 +2,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './pages/root/Root';
 import Home from './pages/home/Home';
 import EditPDF from './pages/editPDF/EditPDF';
+import { editLoader } from './pages/editPDF/loader';
+import DownloadPdf from './pages/download/DownloadPdf';
 
 export default function Router() {
 
@@ -15,8 +17,13 @@ export default function Router() {
                     element: <Home />
                 },
                 {
-                    path: "edit",
-                    element: <EditPDF />
+                    path: "edit/:id",
+                    element: <EditPDF />,
+                    loader: editLoader,
+                },
+                {
+                    path: "download/:id",
+                    element: <DownloadPdf />
                 }
             ]
         },

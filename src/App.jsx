@@ -1,3 +1,4 @@
+import Store from '../store/StoreContext';
 import Router from './Router'
 import { pdfjs } from 'react-pdf';
 
@@ -9,7 +10,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 function App() {
 
   return (
-    <Router />
+    <Store>
+      <Router />
+    </Store>
   )
 }
 

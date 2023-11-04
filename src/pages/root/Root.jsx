@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 
 export default function Root() {
   return (
-    <div className="font-inter">
+    <div className="font-inter min-h-screen ">
         <Header />
         <Outlet />
     </div>

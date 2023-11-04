@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom"
 export default function Home() {
 
   const [loading, setLoading] = useState(false)
-
   const navigate = useNavigate()
 
   const fileChangeHandler = async (e) => {
@@ -21,8 +20,8 @@ export default function Home() {
             headers: { "Content-Type": "multipart/form-data" }
           }
         )
-        console.log(res.data);
-        navigate('edit', {state: `http://localhost:3000/files/${res.data.file}`}) 
+        // const file = await getFetch(res.data.id)
+        navigate(`edit/${res.data.id}`)
       } catch (error) {
         console.log(error);
         setLoading(false)
