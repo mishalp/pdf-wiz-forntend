@@ -22,7 +22,7 @@ export default function EditPDF() {
         setLoading(true)
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.post(`/api/pdf/edit/${id}`, { pages: selected }, { headers: { 'Authorization': `Bearer ${token}`}})
+            const res = await axios.post(`${import.meta.env.VITE_SERVER}/pdf/edit/${id}`, { pages: selected }, { headers: { 'Authorization': `Bearer ${token}`}})
             navigate(`/download/${id}`, { state: res.data.url })
         } catch (error) {
             console.log(error);

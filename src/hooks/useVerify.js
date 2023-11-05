@@ -9,7 +9,7 @@ const useVerify = () => {
             const fetchData = async ()=>{
              const token = localStorage.getItem('token');
                 try {
-                    const res = await axios.get('/api/user/verify',  { headers: {'Authorization': `Bearer ${token}`} });
+                    const res = await axios.get(`${import.meta.env.VITE_SERVER}/user/verify`,  { headers: {'Authorization': `Bearer ${token}`} });
                     setData(res.data.name)
                     setPending(false)
                 } catch (error) {

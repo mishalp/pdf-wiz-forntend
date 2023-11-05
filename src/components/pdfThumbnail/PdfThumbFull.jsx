@@ -20,7 +20,7 @@ function PdfThumbFull({ pdf, id }) {
         setShow(true)
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.delete(`/api/pdf/delete/${id}`,{ headers: { 'Authorization': `Bearer ${token}`}})
+            const res = await axios.delete(`${import.meta.env.VITE_SERVER}/pdf/delete/${id}`,{ headers: { 'Authorization': `Bearer ${token}`}})
             if(res.data.success) location.reload()
         } catch (error) {
             console.log(error);

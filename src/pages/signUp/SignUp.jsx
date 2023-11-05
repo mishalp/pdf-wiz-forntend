@@ -35,7 +35,7 @@ function SignUp() {
       if (!emailRegex.test(data.email)) return setError("Enter a valid email")
       if (data.password.length < 6) return setError("Passwrod must be atleast 6 characters")
 
-      const res = await axios.post(`/api/user/sign-up`, data)
+      const res = await axios.post(`${import.meta.env.VITE_SERVER}/user/sign-up`, data)
       localStorage.setItem('token', res.data.token)
       setUser(res.data.name)
       navigate("/")

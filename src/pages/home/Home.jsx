@@ -15,14 +15,14 @@ export default function Home() {
       formData.append("file", e.target.files[0])
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.post('/api/pdf/upload',
+        const res = await axios.post(`${import.meta.env.VITE_SERVER}/pdf/upload`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data",'Authorization': `Bearer ${token}` }
           }
         )
         // const file = await getFetch(res.data.id)
-        navigate(`edit/${res.data.id}`)
+        navigate(`/edit/${res.data.id}`)
       } catch (error) {
         console.log(error);
         setLoading(false)
