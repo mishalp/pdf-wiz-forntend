@@ -4,6 +4,10 @@ import Home from './pages/home/Home';
 import EditPDF from './pages/editPDF/EditPDF';
 import { editLoader } from './pages/editPDF/loader';
 import DownloadPdf from './pages/download/DownloadPdf';
+import LogIn from './pages/login/LogIn';
+import SignUp from './pages/signUp/SignUp';
+import MyUploads from './pages/myUploads/MyUploads';
+import { uploadsLoader } from './pages/myUploads/loader';
 
 export default function Router() {
 
@@ -24,6 +28,19 @@ export default function Router() {
                 {
                     path: "download/:id",
                     element: <DownloadPdf />
+                },
+                {
+                    path: "login",
+                    element: <LogIn />
+                },
+                {
+                    path: "signup",
+                    element: <SignUp />
+                },
+                {
+                    path: "my-uploads",
+                    element: <MyUploads />,
+                    loader: uploadsLoader
                 }
             ]
         },

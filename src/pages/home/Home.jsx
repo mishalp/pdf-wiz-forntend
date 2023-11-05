@@ -14,10 +14,11 @@ export default function Home() {
       const formData = new FormData()
       formData.append("file", e.target.files[0])
       try {
+        const token = localStorage.getItem('token');
         const res = await axios.post('/api/pdf/upload',
           formData,
           {
-            headers: { "Content-Type": "multipart/form-data" }
+            headers: { "Content-Type": "multipart/form-data",'Authorization': `Bearer ${token}` }
           }
         )
         // const file = await getFetch(res.data.id)

@@ -6,11 +6,13 @@ const Store = ({ children }) => {
 
     const [selected, setSelected] = useState([])
     const [totalPages, setTotalPages] = useState(0)
+    const [user, setUser] = useState(null)
 
     return <StoreContext.Provider
         value={{
             selected, setSelected,
             totalPages, setTotalPages,
+            user, setUser
         }}
     >
         {children}

@@ -1,8 +1,8 @@
-import { useContext, useEffect, useRef, } from "react";
+import { useContext, useRef } from "react";
 import { Page } from "react-pdf";
 import { StoreContext } from "../../../store/StoreContext";
 
-function PdfPage({ index, numPages }) {
+function PdfPage({ index }) {
 
     const {selected, setSelected} = useContext(StoreContext)
 
