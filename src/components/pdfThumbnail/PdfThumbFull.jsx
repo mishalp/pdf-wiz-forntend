@@ -44,7 +44,7 @@ function PdfThumbFull({ pdf, id }) {
                         <Loader />
                     </> : <>
                         <PrimBtn text="Edit" clickHandler={() => editPDF(id)} className="!px-6" />
-                        <PrimBtn text="Delete" clickHandler={() => deletePdf(id)} className="!px-6 bg-red-600" />
+                        <PrimBtn text="Delete" clickHandler={() => deletePdf(id)} className="!px-6 !bg-red-600" />
                     </>}
                 </div>
             }
