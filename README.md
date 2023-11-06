@@ -38,3 +38,8 @@ npm i
 npm start
 ```
 App is running at: http://localhost:5173
+
+## Screenshots
+### Home
+![Screenshot from 2023-11-06 10-35-39](https://github.com/mishalp/pdf-wiz-forntend/assets/72297945/e39d9889-aae0-4671-a15e-ca246a8514d0)
+
