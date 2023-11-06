@@ -1,4 +1,5 @@
 # PDF WIZ
+Deployed at : https://chic-gecko-91a4fd.netlify.app/
 ## Documentaion
 ### 1. Clone frontend
 ```
