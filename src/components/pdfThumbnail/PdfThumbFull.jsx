@@ -12,6 +12,7 @@ function PdfThumbFull({ pdf, id }) {
     const navigate = useNavigate()
 
     const editPDF = (id) => {
+        setLoading(true)
         navigate(`/edit/${id}`)
     }
 
