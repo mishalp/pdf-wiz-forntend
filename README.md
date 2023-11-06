@@ -1,6 +1,6 @@
 # PDF WIZ
 Deployed at : https://chic-gecko-91a4fd.netlify.app/
-## Documentaion
+## Documentation
 ### 1. Clone frontend
 ```
 git clone https://github.com/mishalp/pdf-wiz-forntend.git
