@@ -45,10 +45,10 @@ export default function Header() {
             >My Uploads</a>
           <PrimBtn clickHandler={logout} text="Log Out" />
           </div>}
-        </div> : <>
+        </div> : <div className={`${show? 'flex': 'hidden'} sm:flex`}>
           <a className="p-2 px-4 rounded-md text-secondary font-semibold text-lg " href="/login">Log In</a>
           <PrimBtn link={'/signup'} text="Sign Up" />
-        </>}
+        </div>}
       </div>
     </div>
   )
