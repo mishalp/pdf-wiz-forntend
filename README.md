@@ -13,7 +13,7 @@ VITE_SERVER = "http://localhost:3000/api"
 ```
 npm i
 ```
-### 4. Start the dev serevr
+### 4. Start the dev server
 ```
 npm run dev
 ```
